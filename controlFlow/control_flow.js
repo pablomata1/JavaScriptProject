@@ -12,7 +12,7 @@ if(userRole === 'admin'){
 
 console.log('Access Level: ', accessLevel); //Access Level: Full access granted
 
-//--------------------
+//---------------Nested if else
 
 let isLoggedIn = true;
 let userMessage;
@@ -31,7 +31,7 @@ if(isLoggedIn){
 console.log('User Message: ', userMessage ); //'User Message: Welcome, Admin!'
 
 
-//----------------------
+//----------------Switch Case Conditional
 
 let userType = 'subscriber';
 let userCategory;
@@ -54,9 +54,76 @@ switch(userType){
 console.log("User Category: ", userCategory); //User Category: subscriber
 
 
-//------------------------
+//------------------Ternary Conditional
 
 let isAuthenticated = true;
 
 let authenticatedStatus = isAuthenticated ? 'Authenticated' : 'Not Authenticated'; 
 console.log('Aunthenticated Status: ', authenticatedStatus); //Authenticated Status: Authenticated
+
+
+//----------------------------Addtional Tasks Practice--------------------------------------
+
+//------------if else practice
+let person = 'Employee';
+let accessService;
+
+if(person === 'Employee'){
+    accessService = 'Dietary Services';
+}else if(person === 'Customer'){
+    accessService = 'Customer Service'
+}else{
+    accessService = 'No Services';
+}
+
+console.log('Access Service: ', accessService); //Access Service:  Dietary Services
+
+
+//--------------Nested if else statements practice
+
+let isEnrolled = true;
+let personMessage;
+
+if(isEnrolled){
+    if(person === 'Employee'){
+        personMessage = 'Welcome to Dietary Services, you have a one to one interaction with a dietician';
+    }else{
+        personMessage=  'Welcome, subscriber';
+    }
+}else{
+    personMessage = 'You are not enrolled'
+}
+
+console.log('Person Message: ', personMessage); //Person Message:  Welcome to Dietary Services, you have a one to one interaction with a dietician
+
+
+//-----------------swicth statements practice
+
+let serviceMember = 'subscriber';
+let accessType;
+
+switch(serviceMember){
+    case 'manager' :
+        accessType = 'manager';
+        break;
+    case 'regular' :
+        accessType = 'regular';
+        break;
+    case 'subscriber' :
+        accessType = 'subscriber';
+        break;
+    default:
+        accessType = 'No access'
+}
+
+console.log('Access Type: ', accessType); //Access Type:  subscriber
+
+
+//----------------------Tenary practice statements
+let isSubscribed = true;
+
+let subscribeStatus = isSubscribed ? 'You are enrolled already' : 'You need to enroll';
+
+console.log('Subscribe Status: ', subscribeStatus); //Subscribe Status:  You are enrolled already
+
+
