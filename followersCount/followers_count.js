@@ -18,3 +18,9 @@ function checkCount(){
         alert('Your instagram post gained 20 followers! Congratulations!')
     }
 }
+
+function resetCount(){
+    count = 0;
+    displayCount();
+    alert('Followers count have been reset!')
+}
