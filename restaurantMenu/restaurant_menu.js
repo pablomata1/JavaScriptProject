@@ -1,11 +1,12 @@
-const breakfastMenu = ['Pancakes', 'Eggs Benedict', 'Outmeal', 'Frittata'];
+//const breakfastMenu = ['Pancakes', 'Eggs Benedict', 'Outmeal', 'Frittata'];
 const mainCourseMenu = ['Steak', 'Pasta', 'Burger', 'Salmon'];
 const dessertMenu = ['Cake', 'Ice Cream', 'Pudding', 'Fruit Salad'];
+const breakfastMenu = ['Pancakes- $12', 'Eggs Benedict -$22.99', 'Oatmeal -$21.99', 'Frittata -$15'];
 
 //Using map method for iteration
 //Creates a new array list of p elements 
 //Displays the list to the HTml file 
- const breakfastMenuItemsHTML = breakfastMenu.map((item, index) => `<p>Item ${index + 1}: ${item}</p>`);
+ const breakfastMenuItemsHTML = breakfastMenu.map((item, index) => `<p>Item ${index + 1}: ${item}</p>`).join('');
 document.getElementById('breakfastMenuItems').innerHTML = breakfastMenuItemsHTML;
 console.log(breakfastMenuItemsHTML);
 
