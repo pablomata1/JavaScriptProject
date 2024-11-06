@@ -20,6 +20,7 @@ function generateCards() {
         const card = document.createElement('div');
         card.classList.add('card');
         //It sets the 'dataset.color' attribute of the card element to the current color value from the 'cards' array. 
+        //add property data on tag example: data-color: 'color'
         card.dataset.color = color;
         card.textContent = '?';
         gameContainer.appendChild(card);
@@ -30,8 +31,11 @@ function generateCards() {
 //Shuffles cards
 function shuffle(array) {
     for (let i = array.length - 1; i > 0; i--) {
+        //For refernce on how random generator expression works below:
+        //https://www.w3schools.com/js/js_random.asp
+        //random number from 0 to i+1, if i is 7, then from 0-6, 7 is excluded
         const j = Math.floor(Math.random() * (i + 1));
-        // This line efficiently swaps the values at positions 'i' and 'j' without requiring a temporary variable
+        // This line efficiently swaps the values at positisons 'i' and 'j' without requiring a temporary variable
         //Uses destructuring assignment
         [array[i], array[j]] = [array[j], array[i]];
     }
@@ -83,7 +87,9 @@ function startGame() {
     startbtn.disabled = true;
     score = 0; // Reset score to zero
     scoreElement.textContent = `Score: ${score}`;
+    //starts timer
     startGameTimer(timeLeft);
+    //shuffles cards
     cards = shuffle(colors.concat(colors));
     selectedCards = [];
     gameContainer.innerHTML = '';
