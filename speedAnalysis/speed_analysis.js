@@ -6,7 +6,11 @@ function startTest(){
     document.getElementById('inputText').value = testText;
 
     //Reset results and timer
-    document.getElementById('output').innerHTML = '';    
+    document.getElementById('output').innerHTML = '';
+    let user =  document.getElementById('userInput');
+    user.value = '';
+    user.readOnly = false;
+        
     startTime = new Date().getTime();
     console.log(startTime);
 
